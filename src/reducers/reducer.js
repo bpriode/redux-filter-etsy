@@ -7,7 +7,7 @@ import products from '../data/products';
 // The state will also require a property for the current state of filterable data
 const initialState = {
   filter: 'all',
-  products: []
+  products: products
 }
 
 // Finish writing the reducer for the `FILTER_PRODUCTS` action
@@ -22,7 +22,7 @@ const reducer = function(state = initialState, action) {
     switch(action.type){
       case FILTER_PRODUCTS:
         return update(state, {
-          products: {$push:[]}
+          filter: {$set: action.payload}
         })
         default:
           return state;

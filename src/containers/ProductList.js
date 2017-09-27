@@ -26,12 +26,12 @@ class ProductList extends Component {
 const mapStateToProps = function(state) {
     let products;
     // complete the `if else` statement including conditions and `products` value
-    if () {
-
-    } else if () {
-
+    if (state.filter === 'underTwenty') {
+        products = state.products.filter()
+    } else if (state.filter === 'overTwenty') {
+        products = state.products.filter()
     } else {
-
+        products = state.products.filter
     }
 
     return {products: products}
